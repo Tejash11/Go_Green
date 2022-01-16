@@ -3,6 +3,7 @@ package com.example.gogreen.fragmentclass;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
@@ -14,6 +15,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.gogreen.R;
+import com.example.gogreen.activityclass.billtips;
+import com.example.gogreen.activityclass.checkyourbill;
 import com.example.gogreen.activityclass.i_btninfo;
 
 import java.util.ArrayList;
@@ -103,16 +106,16 @@ public class home extends Fragment {
 //                ft.commit();
 //            }
 //        });
-//        LinearLayout billcalculatorlayout = (LinearLayout) view.findViewById(R.id.billcalculatorlayout);
-//        billcalculatorlayout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                /* to replace a fragment with a fragment */
-//                AppCompatActivity activity = (AppCompatActivity) v.getContext();
-//                Fragment billcalculatingfragment = new billcalculator();
-//                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment, billcalculatingfragment).addToBackStack(null).commit();
-//            }
-//        });
+        LinearLayout billcalculatorlayout = (LinearLayout) view.findViewById(R.id.billcalculatorlayout);
+        billcalculatorlayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /* to replace a fragment with a fragment */
+                AppCompatActivity activity = (AppCompatActivity) v.getContext();
+                Fragment billcalculatingfragment = new billcalculator();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment, billcalculatingfragment).addToBackStack(null).commit();
+            }
+        });
 
         ImageView ibutton = (ImageView) view.findViewById(R.id.ibutton);
         ibutton.setOnClickListener(new View.OnClickListener() {
@@ -123,24 +126,24 @@ public class home extends Fragment {
             }
         });
 
-//        viewbill = (CardView) view.findViewById(R.id.viewbill);
-//        viewbill.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(getContext(), checkyourbill.class);
-//                startActivity(i);
-//            }
-//        });
+        viewbill = (CardView) view.findViewById(R.id.viewbill);
+        viewbill.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), checkyourbill.class);
+                startActivity(i);
+            }
+        });
 
-//        tipscard = (CardView) view.findViewById(R.id.tips);
-//        tipscard.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(getContext(), billtips.class);
-//                i.putExtra("bundle", bundle);
-//                startActivity(i);
-//            }
-//        });
+        tipscard = (CardView) view.findViewById(R.id.tips);
+        tipscard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), billtips.class);
+                i.putExtra("bundle", bundle);
+                startActivity(i);
+            }
+        });
 
         return view;
     }
