@@ -15,7 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GoGreen">
-        <activity android:name=".govn_scheme"></activity>
+        <activity android:name=".activityclass.funfarm"></activity>
+        <activity android:name=".activityclass.gogreengame" />
+        <activity android:name=".govn_scheme" />
         <activity android:name=".activityclass.tipsinfo" />
         <activity android:name=".activityclass.billtips" />
         <activity android:name=".activityclass.checkyourbill" />

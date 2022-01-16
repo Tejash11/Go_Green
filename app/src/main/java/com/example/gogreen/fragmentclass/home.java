@@ -6,6 +6,8 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
@@ -96,16 +98,16 @@ public class home extends Fragment {
 
         LinearLayout gameview = (LinearLayout) view.findViewById(R.id.gamelayout);
 
-//        gameview.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                FragmentManager fm = getActivity().getSupportFragmentManager();
-//                FragmentTransaction ft = fm.beginTransaction();
-//                Fragment game = new gamezone();
-//                ft.replace(R.id.fragment,game);
-//                ft.commit();
-//            }
-//        });
+        gameview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                Fragment game = new gamezone();
+                ft.replace(R.id.fragment,game);
+                ft.commit();
+            }
+        });
         LinearLayout billcalculatorlayout = (LinearLayout) view.findViewById(R.id.billcalculatorlayout);
         billcalculatorlayout.setOnClickListener(new View.OnClickListener() {
             @Override
