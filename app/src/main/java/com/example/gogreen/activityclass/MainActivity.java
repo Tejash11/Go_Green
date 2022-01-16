@@ -60,21 +60,22 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-//        solarbtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                solarbtn.setImageResource(R.drawable.sunimg);
-//                homebtn.setImageResource(R.drawable.homepageoutline);
-//                windbtn.setImageResource(R.drawable.windmill);
-//                FragmentManager m = getSupportFragmentManager();
-//                FragmentTransaction t = m.beginTransaction();
-//                Fragment solar = new solar();
-//                solar.setArguments(bundle);
-//                t.replace(R.id.fragment, solar);
-//                t.commit();
-//            }
-//        });
-//
+      solarbtn.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+              solarbtn.setImageResource(R.drawable.sunimg);
+              homebtn.setImageResource(R.drawable.homepageoutline);
+              windbtn.setImageResource(R.drawable.windmill);
+              FragmentManager m = getSupportFragmentManager();
+              FragmentTransaction t = m.beginTransaction();
+              Fragment solar = new solar();
+              solar.setArguments(bundle);
+              t.replace(R.id.fragment, solar);
+              t.commit();
+          }
+      });
+
+
 //        windbtn.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
