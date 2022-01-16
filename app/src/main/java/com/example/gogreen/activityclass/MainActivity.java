@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.gogreen.R;
+import com.example.gogreen.fragmentclass.AgriVoltaics;
 import com.example.gogreen.fragmentclass.home;
 
 public class MainActivity extends AppCompatActivity {
@@ -76,18 +77,18 @@ public class MainActivity extends AppCompatActivity {
       });
 
 
-//        windbtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                windbtn.setImageResource(R.drawable.windimg);
-//                solarbtn.setImageResource(R.drawable.sunfill);
-//                homebtn.setImageResource(R.drawable.homepageoutline);
-//                FragmentManager m = getSupportFragmentManager();
-//                FragmentTransaction t = m.beginTransaction();
-//                Fragment solar = new AgriVoltaics();
-//                t.replace(R.id.fragment, solar);
-//                t.commit();
-//            }
-//        });
+        windbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                windbtn.setImageResource(R.drawable.windimg);
+                solarbtn.setImageResource(R.drawable.sunfill);
+                homebtn.setImageResource(R.drawable.homepageoutline);
+                FragmentManager m = getSupportFragmentManager();
+                FragmentTransaction t = m.beginTransaction();
+                Fragment solar = new AgriVoltaics();
+                t.replace(R.id.fragment, solar);
+                t.commit();
+            }
+        });
     }
 }
